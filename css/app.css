@@ -130,6 +130,19 @@ h1 {
  	height: 50px;
  }
 
+ /*Styles for copyright*/
+ .copyright {
+ 	width: 95%;
+ 	text-align: center;
+ 	margin: 20px auto 0 auto;
+ 	animation: pulse 0.65s infinite;
+ }
+
+ .copyright h4{
+ 	font-style: bold;
+ 	margin: 0 0;
+ }
+
  /* Animations */
  @keyframes bounceIn {
  	from,
