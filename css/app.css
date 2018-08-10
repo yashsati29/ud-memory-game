@@ -73,6 +73,7 @@ h1 {
 
  .deck .card.open {
  	transform: rotateY(0);
+ 	animation: bounceIn 0.5s;
  	background: #02b3e4;
  	cursor: default;
  }
@@ -84,7 +85,15 @@ h1 {
  .deck .card.match {
  	cursor: default;
  	background: #02ccba;
+ 	animation: tada 0.8s;
  	font-size: 33px;
+ }
+
+ .deck .card.fail {
+ 	cursor: default;
+ 	background: #d80f0f;
+ 	animation: wobble 0.65s;
+ 	font-size: 33px;	
  }
 
 /*
@@ -206,5 +215,63 @@ h1 {
  	to {
  		-webkit-transform: scale3d(1, 1, 1);
  		transform: scale3d(1, 1, 1);
+ 	}
+ }
+
+ @keyframes tada {
+ 	from {
+ 		transform: scale3d(1, 1, 1);
+ 	}
+
+ 	10%,
+ 	20% {
+ 		transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+ 	}
+
+ 	30%,
+ 	50%,
+ 	70%,
+ 	90% {
+ 		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+ 	}
+
+ 	40%,
+ 	60%,
+ 	80% {
+ 		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+ 	}
+
+ 	to {
+ 		transform: scale3d(1, 1, 1);
+ 	}
+ }
+
+ @keyframes wobble {
+ 	from {
+ 		transform: translate3d(0, 0, 0);
+ 	}
+
+ 	15% {
+ 		transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+ 	}
+
+ 	30% {
+ 		transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+ 	}
+
+ 	45% {
+ 		transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+ 	}
+
+ 	60% {
+ 		transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+ 	}
+
+ 	75% {
+ 		transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+ 	}
+
+ 	to {
+ 		transform: translate3d(0, 0, 0);
  	}
  }
