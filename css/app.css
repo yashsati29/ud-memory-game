@@ -46,7 +46,8 @@ h1 {
  .deck {
  	width: 660px;
  	min-height: 680px;
- 	background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+ 	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+ 	background-size: 700% 700%;
  	padding: 32px;
  	border-radius: 10px;
  	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
@@ -54,7 +55,7 @@ h1 {
  	flex-wrap: wrap;
  	justify-content: space-between;
  	align-items: center;
- 	animation: pulse 0.4s;
+ 	animation: Gradient 78s ease infinite, pulse 0.4s;
  }
 
  .deck .card {
@@ -273,5 +274,17 @@ h1 {
 
  	to {
  		transform: translate3d(0, 0, 0);
+ 	}
+ }
+
+ @keyframes Gradient {
+ 	0% {
+ 		background-position: 0% 50%
+ 	}
+ 	50% {
+ 		background-position: 100% 50%
+ 	}
+ 	100% {
+ 		background-position: 0% 50%
  	}
  }
