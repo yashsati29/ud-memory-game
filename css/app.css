@@ -148,12 +148,18 @@ h1 {
  /*Styles for copyright*/
  .copyright {
  	width: 95%;
+ 	font-size: 1.1em;
  	text-align: center;
  	margin: 20px auto 0 auto;
  	animation: pulse 0.65s infinite;
  }
 
- .copyright h4{
+ .copyright a {
+ 	text-decoration: none;
+ 	color: #000;
+ }
+
+ .copyright h4 {
  	font-style: bold;
  	margin: 0 0;
  }
