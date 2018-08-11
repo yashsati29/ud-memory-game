@@ -2,13 +2,9 @@
  * Create a list that holds all of your cards
  */
  const cardList = ['fa fa-diamond','fa fa-paper-plane-o','fa fa-anchor','fa fa-bolt','fa fa-cube','fa fa-anchor','fa fa-leaf','fa fa-bicycle','fa fa-diamond','fa fa-bomb','fa fa-leaf', 'fa fa-bomb', 'fa fa-bolt', 'fa fa-bicycle','fa fa-paper-plane-o','fa fa-cube'];
-
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
+ 
+ const deck = document.querySelector('.deck'); // Selected Deck Class Element
+ const ul = document.createDocumentFragment('ul'); // Created ul element to work on it & append it later in the DOM
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -24,6 +20,23 @@ function shuffle(array) {
 
 	return array;
 }
+
+ // Function to shuffle & create HTML of each card
+ function createCard() {
+ 	const shuffleCards = shuffle(cardList);
+ 	shuffleCards.forEach(function(card){
+ 		const li = document.createElement('li');
+ 		const i = document.createElement('i');
+ 		li.setAttribute('class','card');
+ 		i.setAttribute('class',card);
+ 		li.appendChild(i);
+ 		ul.appendChild(li);
+ 	});
+ 	deck.appendChild(ul);
+ }
+
+// Appending the cards generated randomly to the deck
+createCard();
 
 /*
  * set up the event listener for a card. If a card is clicked:
