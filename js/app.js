@@ -38,6 +38,21 @@ function shuffle(array) {
 // Appending the cards generated randomly to the deck
 createCard();
 
+let cards = document.querySelectorAll('.card'); // Stored cards in NodeList format array
+
+const moves = document.querySelector('.moves'); // Stored moves element
+
+const restartButton = document.querySelector('.restart'); // Stored restartButton element
+
+const minutes = document.querySelector('.minutes');	// Stored minutes element
+const seconds = document.querySelector('.seconds'); // Stored seconds element
+
+let openedCards = []; // Initialize openCards array to store opened cards
+let matchedCards = []; // Initialize matchedCards array to store matched cards
+
+let timerId = 0; // Storing timerId to end the setInterval function
+let timerOn = false; // Flag variable
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
