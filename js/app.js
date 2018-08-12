@@ -53,6 +53,8 @@ let matchedCards = []; // Initialize matchedCards array to store matched cards
 let timerId = 0; // Storing timerId to end the setInterval function
 let timerOn = false; // Flag variable
 
+let moveCounter = 0; // Initialize moveCounter for storing moves
+
 deck.addEventListener('click',function(e) {
 	let minCounter = 0;
 	let secCounter = 0;
@@ -85,3 +87,18 @@ deck.addEventListener('click',function(e) {
 cards.forEach(function(card) {
 	card.addEventListener('click',show);
 });
+
+function show(e) {
+	if(openedCards.length === 2 || e.target.classList.contains('open','show') || e.target.classList.contains('match')) {
+		return;
+	}
+
+	e.target.classList.add('open','show','disable');
+	openedCards.push(e.target);
+	if(openCards.length === 2) {
+		moveCounter++;
+		moves.textContent=moveCounter;
+		starScore('.stars');
+		matchCard();
+	}
+}
