@@ -80,3 +80,8 @@ deck.addEventListener('click',function(e) {
 		seconds.textContent = secCounter < 10 ? '0'+secCounter : secCounter;
 	}
 });
+
+//Added listener to each card in deck
+cards.forEach(function(card) {
+	card.addEventListener('click',show);
+});
