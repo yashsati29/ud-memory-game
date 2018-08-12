@@ -213,6 +213,12 @@ h1 {
  	background-color: #f44336;
  }
 
+
+ /*disable pointer events*/
+ .disable {
+ 	pointer-events: none;
+ }
+
  /* Animations */
  @keyframes bounceIn {
  	from,
