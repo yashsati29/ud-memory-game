@@ -89,16 +89,34 @@ cards.forEach(function(card) {
 });
 
 function show(e) {
-	if(openedCards.length === 2 || e.target.classList.contains('open','show') || e.target.classList.contains('match')) {
+	if(openedCards.length >= 2 || e.target.classList.contains('open','show') || e.target.classList.contains('match')) {
 		return;
 	}
 
 	e.target.classList.add('open','show','disable');
 	openedCards.push(e.target);
-	if(openCards.length === 2) {
+	if(openedCards.length === 2) {
 		moveCounter++;
 		moves.textContent=moveCounter;
-		starScore('.stars');
 		matchCard();
 	}
 }
+
+//function defined for match cards
+function matchCard() {
+	if(openedCards[0].firstElementChild.getAttribute('class') === openedCards[1].firstElementChild.getAttribute('class')) {
+		openedCards.map(function(card) {
+			card.className = 'card match disable';
+			matchedCards.push(card);
+		});
+		openedCards = [];
+	} else {
+		openedCards.map(function(card) {
+			card.className = 'card fail disable';
+			setTimeout(function(){
+				card.classList.remove('open','show','disable','fail');	
+			},1000);
+		});
+		openedCards = [];
+	}
+} 
