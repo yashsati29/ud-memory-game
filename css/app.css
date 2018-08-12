@@ -147,7 +147,7 @@ h1 {
 
  /*Styles for copyright*/
  .copyright {
- 	width: 95%;
+ 	width: 93%;
  	font-size: 1.1em;
  	text-align: center;
  	margin: 20px auto 0 auto;
@@ -162,6 +162,55 @@ h1 {
  .copyright h4 {
  	font-style: bold;
  	margin: 0 0;
+ }
+
+ /*Congratulations message styling*/
+ .message {
+ 	display: none;
+ 	position: absolute;
+ 	margin: 0 auto 0 auto;
+ 	background-color: #fff;
+ 	width: 500px;
+ 	border-radius: 20px;
+ 	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+ 	animation: bounceIn 0.8s;
+ }
+
+ .message img {
+ 	height: 250px;
+ 	margin: 26px 0 26px 26px;
+ }
+
+ .cMessage {
+ 	text-align: center;
+ 	font-size: 1.2em;
+ 	font-family: 'Quicksand', sans-serif;
+ 	font-weight: bold;
+ }
+
+ .cButtons {
+ 	text-align: center;
+ 	margin: 10px 0 26px 0;
+ }
+
+ .message button {
+ 	padding: 10px 10px 10px 10px;
+ 	margin: 0 10px 0 10px;
+ }
+
+ .cPlay,
+ .cClose {
+ 	border: none;
+ 	color: #fff;
+ 	border-radius: 5px;
+ }
+
+ .cPlay {
+ 	background-color: #008CBA;
+ }
+
+ .cClose {
+ 	background-color: #f44336;
  }
 
  /* Animations */

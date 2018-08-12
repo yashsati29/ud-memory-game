@@ -12,6 +12,9 @@
 	
 	<meta charset="utf-8">
 	
+	<!-- Quicksand font import -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
 	<!-- app.css file import -->
 	<link rel="stylesheet" href="css/app.css">
 
@@ -56,6 +59,18 @@
 		<!-- Matching deck -->
 		<ul class="deck">
 		</ul>
+
+		<!-- Congratulation message -->
+		<div class="message">
+			<img src="./img/congrats.gif" alt="congrats">
+			<div class="cMessage">
+				You Completed This Game In <span class="cMoves">00</span> Moves & <span class="cMin">00</span>:<span class="cSec">00</span>
+			</div>
+			<div class="cButtons">
+				<button class="cPlay">Play Again</button>
+				<button class="cClose">Close</button>
+			</div>
+		</div>
 	</div>
 
 	<!-- Copyright attributions -->
@@ -65,7 +80,7 @@
 			<h4>DevS</h4>
 		</a>
 	</div>
-	
+
 	<!-- app.js file import -->
 	<script src="js/app.js"></script>
 </body>
