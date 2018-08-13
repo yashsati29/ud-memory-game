@@ -63,6 +63,7 @@ const cMessage = document.querySelector('.message');
 const cMoves = document.querySelector('.cMoves');
 const cMin = document.querySelector('.cMin');
 const cSec = document.querySelector('.cSec');
+const cClose = document.querySelector('.cClose');
 
 const copyright = document.querySelector('.copyright');
 
@@ -146,3 +147,14 @@ function popup() {
 	cMin.textContent = minutes.textContent;
 	cSec.textContent = seconds.textContent;
 }
+
+// Adding close button functionality on congratulations message popup
+cClose.addEventListener('click', function(){
+	cMessage.style.cssText = 'display: none';
+	heading.style.cssText = 'opacity: 1';
+	scorePanel.style.cssText = 'opacity: 1';
+	deck.style.cssText = 'opacity: 1';
+	copyright.style.cssText = 'opacity: 1';
+	restartButton.classList.remove('disable');
+	copyright.classList.remove('disable');
+});
