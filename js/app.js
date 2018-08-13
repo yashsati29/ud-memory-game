@@ -55,6 +55,17 @@ let timerOn = false; // Flag variable
 
 let moveCounter = 0; // Initialize moveCounter for storing moves
 
+const heading = document.querySelector('.heading');
+
+const scorePanel = document.querySelector('.score-panel');
+
+const cMessage = document.querySelector('.message');
+const cMoves = document.querySelector('.cMoves');
+const cMin = document.querySelector('.cMin');
+const cSec = document.querySelector('.cSec');
+
+const copyright = document.querySelector('.copyright');
+
 deck.addEventListener('click',function(e) {
 	let minCounter = 0;
 	let secCounter = 0;
@@ -62,6 +73,7 @@ deck.addEventListener('click',function(e) {
 	if(matchedCards.length === 16) {
 		timerOn = false;
 		clearInterval(timerId);
+		popup();
 		return;
 	}
 
@@ -120,3 +132,17 @@ function matchCard() {
 		openedCards = [];
 	}
 } 
+
+// Function to declare congratulation message
+function popup() {
+	heading.style.cssText = 'opacity: 0.2';
+	scorePanel.style.cssText = 'opacity: 0.2';
+	deck.style.cssText = 'opacity: 0.2';
+	copyright.style.cssText = 'opacity: 0.2';
+	cMessage.style.cssText = 'display: block';
+	restartButton.classList.add('disable');
+	copyright.classList.add('disable');
+	cMoves.textContent = moves.textContent;
+	cMin.textContent = minutes.textContent;
+	cSec.textContent = seconds.textContent;
+}
