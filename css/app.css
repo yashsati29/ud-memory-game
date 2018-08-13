@@ -203,6 +203,7 @@ h1 {
  	border: none;
  	color: #fff;
  	border-radius: 5px;
+ 	cursor: pointer;
  }
 
  .cPlay {
