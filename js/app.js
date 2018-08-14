@@ -131,9 +131,11 @@ function matchCard() {
 	} else {
 		openedCards.map(function(card) {
 			card.className = 'card fail disable';
+			deck.className = 'deck disable';
 			setTimeout(function(){
-				card.classList.remove('open','show','disable','fail');	
-			},1000);
+				card.classList.remove('open','show','disable','fail');
+				deck.classList.remove('disable');	
+			},700);
 		});
 		openedCards = [];
 	}
