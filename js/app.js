@@ -124,6 +124,10 @@ function matchCard() {
 	if(openedCards[0].firstElementChild.getAttribute('class') === openedCards[1].firstElementChild.getAttribute('class')) {
 		openedCards.map(function(card) {
 			card.className = 'card match disable';
+			deck.className = 'deck disable';
+			setTimeout(function(){
+				deck.classList.remove('disable');	
+			},850);
 			matchedCards.push(card);
 		});
 		openedCards = [];
