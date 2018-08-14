@@ -1,3 +1,4 @@
+/* Added Responsiveness For 320px Viewport Width */
 @media screen and (min-width: 320px) {
 	#nav-bar {
 		height: 40px;
@@ -73,12 +74,14 @@
 	}
 }
 
+/* Added Responsiveness For 375px Viewport Width */
 @media screen and (min-width: 375px) {
 	.copyright {
 		font-size: medium;
 	}
 }
 
+/* Added Responsiveness For 425px Viewport Width */
 @media screen and (min-width: 425px) {
 	.deck {
 		width: 350px;
@@ -122,6 +125,7 @@
 	}
 }
 
+/* Added Responsiveness For 768px Viewport Width */
 @media screen and (min-width: 768px) {
 	#nav-bar {
 		height: 50px;
@@ -191,6 +195,7 @@
 	}
 }
 
+/* Added Responsiveness For 1440px Viewport Width */
 @media screen and (min-width: 1440px) {
 	#nav-bar {
 		height: 60px;
