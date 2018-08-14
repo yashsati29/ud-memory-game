@@ -197,11 +197,11 @@ function restart(parentTag, fragment) {
 
 // Added close function to close the congratulations popup
 function close () {
-	cMessage.style.cssText = 'display: none';
-	heading.style.cssText = 'opacity: 1';
-	scorePanel.style.cssText = 'opacity: 1';
-	deck.style.cssText = 'opacity: 1';
-	copyright.style.cssText = 'opacity: 1';
+	cMessage.style.cssText = '';
+	heading.style.cssText = '';
+	scorePanel.style.cssText = '';
+	deck.style.cssText = '';
+	copyright.style.cssText = '';
 	restartButton.classList.remove('disable');
 	copyright.classList.remove('disable');
 }
