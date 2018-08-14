@@ -192,6 +192,7 @@ function restart(parentTag, fragment) {
 	matchedCards = [];
 	timerOn = false;
 	clearInterval(timerId);
+	resetStar();
 }
 
 // Added close function to close the congratulations popup
@@ -221,4 +222,14 @@ function ratings() {
 		sStar[1].style.cssText = 'opacity: 0';
 		cStar[1].style.cssText = 'display: none';	
 	}
+}
+
+// Added function to reset stars on clicking restart and play again button
+function resetStar() {
+	sStar.forEach(function(star) {
+		star.style.cssText = '';
+	});
+	cStar.forEach(function(star) {
+		star.style.cssText = '';
+	});
 }
