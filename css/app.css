@@ -176,9 +176,24 @@ h1 {
  	animation: bounceIn 0.8s;
  }
 
+ .cStars {
+ 	text-align: center;
+ 	padding: 0;
+ 	margin: 10px 0 0 0;
+ }
+
+ .cStar {
+ 	list-style-type: none;
+ 	display: inline-block;
+ }
+
+ .cStar .fa {
+ 	color: yellow;
+ }
+
  .message img {
  	height: 250px;
- 	margin: 26px 0 26px 26px;
+ 	margin: 10px 0 26px 26px;
  }
 
  .cMessage {
