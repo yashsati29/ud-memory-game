@@ -59,6 +59,9 @@ const heading = document.querySelector('.heading');
 
 const scorePanel = document.querySelector('.score-panel');
 
+const sStar = document.querySelectorAll('.sStar');
+
+const cStar = document.querySelectorAll('.cStar');
 const cMessage = document.querySelector('.message');
 const cMoves = document.querySelector('.cMoves');
 const cMin = document.querySelector('.cMin');
@@ -113,6 +116,7 @@ function show(e) {
 		moveCounter++;
 		moves.textContent=moveCounter;
 		matchCard();
+		ratings();
 	}
 }
 
@@ -204,3 +208,15 @@ cPlay.addEventListener('click',function() {
 	restart(deck,ul);
 	close();
 });
+
+//Added ratings feature to give stars based on player performance
+function ratings() {
+	if(moveCounter > 12 && moveCounter <= 16) {
+		sStar[0].style.cssText = 'opacity: 0';
+		cStar[0].style.cssText = 'display: none';
+	}
+	if(moveCounter > 16) {
+		sStar[1].style.cssText = 'opacity: 0';
+		cStar[1].style.cssText = 'display: none';	
+	}
+}
