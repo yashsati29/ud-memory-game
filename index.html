@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<!-- Title bar heading -->
 	<title>Memory Game - UDACITY</title>
-	
+
 	<!-- Title bar icon import -->
 	<link rel="shortcut icon" href="./img/favicon.ico">
-	
+
 	<!-- Responsiveness -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<meta charset="utf-8">
-	
+
 	<!-- Quicksand font import -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
@@ -22,22 +23,24 @@
 	<link rel="stylesheet" href="css/responsive.css">
 
 	<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-	
+
 	<link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
 </head>
+
 <body>
 	<!-- Navigation bar -->
 	<div id="nav-bar">
+		<!-- Udacity logo -->
 		<img class="udacity-logo-nav" src="./img/udacity-logo.png" alt="udacity-logo">
 	</div>
-	
+
 	<!-- Page content -->
 	<div class="container">
 		<!-- Page heading -->
 		<div class="heading">
 			<h1>Matching Game</h1>
 		</div>
-		
+
 		<!-- Score panel -->
 		<section class="score-panel">
 			<!-- Move's rating panel -->
@@ -46,34 +49,41 @@
 				<li class="sStar"><i class="fa fa-star"></i></li>
 				<li class="sStar"><i class="fa fa-star"></i></li>
 			</ul>
-			
+
 			<!-- Moves counter -->
 			<span class="moves">0</span> Moves
-			
+
 			<!-- Time counter -->
 			<div class="time-counter"><span class="minutes">00</span>:<span class="seconds">00</span></div>
-			
+
 			<!-- Restart button -->
 			<div class="restart">
 				<i class="fa fa-repeat"></i>
 			</div>
 		</section>
-		
+
 		<!-- Matching deck -->
 		<ul class="deck">
 		</ul>
 
 		<!-- Congratulation message -->
 		<div class="message">
+			<!-- Rating on congratulations message -->
 			<ul class="cStars">
 				<li class="cStar"><i class="fa fa-star"></i></li>
 				<li class="cStar"><i class="fa fa-star"></i></li>
 				<li class="cStar"><i class="fa fa-star"></i></li>
 			</ul>
+
+			<!-- Congratulations image -->
 			<img src="./img/congrats.gif" alt="congrats">
+
+			<!-- Congratulations message -->
 			<div class="cMessage">
 				You Completed This Game In <span class="cMoves">00</span> Moves & <span class="cMin">00</span>:<span class="cSec">00</span>
 			</div>
+
+			<!-- Play again and close button -->
 			<div class="cButtons">
 				<button class="cPlay">Play Again</button>
 				<button class="cClose">Close</button>
@@ -92,4 +102,5 @@
 	<!-- app.js file import -->
 	<script src="js/app.js"></script>
 </body>
+
 </html>
