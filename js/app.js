@@ -63,6 +63,7 @@ const cMessage = document.querySelector('.message');
 const cMoves = document.querySelector('.cMoves');
 const cMin = document.querySelector('.cMin');
 const cSec = document.querySelector('.cSec');
+const cPlay = document.querySelector('.cPlay');
 const cClose = document.querySelector('.cClose');
 
 const copyright = document.querySelector('.copyright');
@@ -197,3 +198,9 @@ function close () {
 	restartButton.classList.remove('disable');
 	copyright.classList.remove('disable');
 }
+
+//Adding event listener to play again button in congratulations popup
+cPlay.addEventListener('click',function() {
+	restart(deck,ul);
+	close();
+});
