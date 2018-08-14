@@ -163,3 +163,34 @@ cClose.addEventListener('click', function() {
 restartButton.addEventListener('click', function() {
 	restart(deck, ul);
 });
+
+// Added restart button functionality
+function restart(parentTag, fragment) {
+	const newList = [];
+	cards.forEach(function(card) {
+		newList.push(card);
+	});
+	parentTag.innerHTML = '';
+	cards = shuffle(newList);
+	for (let card of cards) {
+		fragment.appendChild(card);
+	}
+	parentTag.appendChild(fragment);
+	if (openedCards.length === 0 && matchedCards.length === 0 && moveCounter === 0) {
+		return;
+	}
+	matchedCards.map(function(card) {
+		card.classList.remove('match','disable');
+	});
+	openedCards.map(function(card) {
+		card.classList.remove('open','show','disable');
+	});
+	moveCounter = 0;
+	moves.textContent = moveCounter;
+	minutes.textContent = '00';
+	seconds.textContent = '00';
+	openedCards = [];
+	matchedCards = [];
+	timerOn = false;
+	clearInterval(timerId);
+}
