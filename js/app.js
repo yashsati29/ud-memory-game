@@ -1,8 +1,5 @@
-/*
- * Create a list that holds all of your cards
- */
  const cardList = ['fa fa-diamond','fa fa-paper-plane-o','fa fa-anchor','fa fa-bolt','fa fa-cube','fa fa-anchor','fa fa-leaf','fa fa-bicycle','fa fa-diamond','fa fa-bomb','fa fa-leaf', 'fa fa-bomb', 'fa fa-bolt', 'fa fa-bicycle','fa fa-paper-plane-o','fa fa-cube'];
- 
+
  const deck = document.querySelector('.deck'); // Selected Deck Class Element
  const ul = document.createDocumentFragment('ul'); // Created ul element to work on it & append it later in the DOM
 
@@ -55,22 +52,23 @@ let timerOn = false; // Flag variable
 
 let moveCounter = 0; // Initialize moveCounter for storing moves
 
-const heading = document.querySelector('.heading');
+const heading = document.querySelector('.heading'); // Stored heading element
 
-const scorePanel = document.querySelector('.score-panel');
+const scorePanel = document.querySelector('.score-panel'); // Stored score-panel element
 
-const sStar = document.querySelectorAll('.sStar');
+const sStar = document.querySelectorAll('.sStar'); // Stored score-panel stars
 
-const cStar = document.querySelectorAll('.cStar');
-const cMessage = document.querySelector('.message');
-const cMoves = document.querySelector('.cMoves');
-const cMin = document.querySelector('.cMin');
-const cSec = document.querySelector('.cSec');
-const cPlay = document.querySelector('.cPlay');
-const cClose = document.querySelector('.cClose');
+const cStar = document.querySelectorAll('.cStar'); // Stored congratulations message's stars
+const cMessage = document.querySelector('.message'); // Stored congratulations message
+const cMoves = document.querySelector('.cMoves'); // Stored congratulations message's move
+const cMin = document.querySelector('.cMin'); // Stored congratulations message's minutes
+const cSec = document.querySelector('.cSec'); // Stored congratulations message's seconds
+const cPlay = document.querySelector('.cPlay'); // Stored play again button
+const cClose = document.querySelector('.cClose'); // Stored close button
 
-const copyright = document.querySelector('.copyright');
+const copyright = document.querySelector('.copyright'); // Stored copyright element
 
+// Adding event listener to deck class
 deck.addEventListener('click',function(e) {
 	let minCounter = 0;
 	let secCounter = 0;
@@ -100,11 +98,12 @@ deck.addEventListener('click',function(e) {
 	}
 });
 
-//Added listener to each card in deck
+// Added listener to each card in deck
 cards.forEach(function(card) {
 	card.addEventListener('click',show);
 });
 
+// Implementing show function to show card's icon on click
 function show(e) {
 	if(openedCards.length >= 2 || e.target.classList.contains('open','show') || e.target.classList.contains('match')) {
 		return;
@@ -120,7 +119,7 @@ function show(e) {
 	}
 }
 
-//function defined for match cards
+// Function defined for matching cards which check if cards are of same type or not
 function matchCard() {
 	if(openedCards[0].firstElementChild.getAttribute('class') === openedCards[1].firstElementChild.getAttribute('class')) {
 		openedCards.map(function(card) {
@@ -158,12 +157,12 @@ function popup() {
 // Adding close button functionality on congratulations message popup
 cClose.addEventListener('click', close);
 
-// Adding event listener to restart button
+// Adding event listener to restart button to restart the game
 restartButton.addEventListener('click', function() {
 	restart(deck, ul);
 });
 
-// Added restart button functionality
+// Added restart button functionality which shuffles the card, time, moves, star and restart the game
 function restart(parentTag, fragment) {
 	const newList = [];
 	cards.forEach(function(card) {
@@ -195,7 +194,7 @@ function restart(parentTag, fragment) {
 	resetStar();
 }
 
-// Added close function to close the congratulations popup
+// Added close function to close the congratulations popup in close and play again button
 function close () {
 	cMessage.style.cssText = '';
 	heading.style.cssText = '';
@@ -206,13 +205,13 @@ function close () {
 	copyright.classList.remove('disable');
 }
 
-//Adding event listener to play again button in congratulations popup
+// Adding event listener to play again button in congratulations popup
 cPlay.addEventListener('click',function() {
 	restart(deck,ul);
 	close();
 });
 
-//Added ratings feature to give stars based on player performance
+// Added ratings feature to give stars based on player performance
 function ratings() {
 	if(moveCounter > 12 && moveCounter <= 16) {
 		sStar[0].style.cssText = 'opacity: 0';
