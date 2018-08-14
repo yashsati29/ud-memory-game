@@ -190,3 +190,72 @@
 		font-size: larger;
 	}
 }
+
+@media screen and (min-width: 1440px) {
+	#nav-bar {
+		height: 60px;
+	}
+	
+	.udacity-logo-nav {
+		height: 50px;
+	}
+
+	.heading {
+		font-size: larger;
+	}
+
+	.score-panel {
+		width: 450px;
+		font-size: x-large;
+		margin: 0 auto 0 auto;
+	}
+
+	.time-counter {
+		margin: 0 0 0 160px;
+	}
+
+	.deck {
+		width: 660px;
+		min-height: 680px;
+		padding: 30px;
+	}
+
+	.deck .card {
+		height: 125px;
+		width: 125px;
+	}
+
+	.deck .card.show {
+		font-size: 35px;
+	}
+
+	.deck .card.match {
+		font-size: 35px;
+	}
+
+	.deck .card.fail {
+		font-size: 35px;	
+	}
+
+	.cStar {
+		font-size: xx-large;
+	}
+
+	.message {
+		width: 500px;
+		height: 450px;
+		margin: 70px 0 0 0;
+	}
+
+	.message img {
+		height: 270px;
+	}
+
+	.cMessage {
+		font-size: 20px;
+	}
+
+	.copyright {
+		font-size: x-large;
+	}
+}
