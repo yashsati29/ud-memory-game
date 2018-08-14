@@ -149,15 +149,7 @@ function popup() {
 }
 
 // Adding close button functionality on congratulations message popup
-cClose.addEventListener('click', function() {
-	cMessage.style.cssText = 'display: none';
-	heading.style.cssText = 'opacity: 1';
-	scorePanel.style.cssText = 'opacity: 1';
-	deck.style.cssText = 'opacity: 1';
-	copyright.style.cssText = 'opacity: 1';
-	restartButton.classList.remove('disable');
-	copyright.classList.remove('disable');
-});
+cClose.addEventListener('click', close);
 
 // Adding event listener to restart button
 restartButton.addEventListener('click', function() {
