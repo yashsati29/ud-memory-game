@@ -78,3 +78,46 @@
 		font-size: medium;
 	}
 }
+
+@media screen and (min-width: 425px) {
+	.deck {
+		width: 350px;
+		min-height: 350px;
+		padding: 20px;
+	}
+
+	.message {
+		width: 320px;
+		height: 320px;
+		margin: 50px 0 0 0;
+	}
+
+	.message img {
+		height: 170px;
+	}
+
+	.cMessage {
+		font-size: 15px;
+	}
+
+	.message button {
+		padding: 10px 10px 10px 10px;
+	}
+	
+	.deck .card {
+		height: 65px;
+		width: 65px;
+	}
+
+	.deck .card.show {
+		font-size: 23px;
+	}
+
+	.deck .card.match {
+		font-size: 23px;
+	}
+
+	.deck .card.fail {
+		font-size: 23px;	
+	}
+}
